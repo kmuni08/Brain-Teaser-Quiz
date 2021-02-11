@@ -1,0 +1,537 @@
+/*
+Homepage or Game Rules webpage CSS.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+h1 {
+      color: black;
+      text-align: center;
+   }
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000080, 0 0 40px #000080, 0 0 50px #000080, 0 0 60px #000080, 0 0 70px #000080;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 60px #0000FF, 0 0 70px #0000FF, 0 0 80px #0000FF;
+  }
+}
+
+#game_rules {
+  background-color: black;
+  background-image: url(/images/stars.gif);
+  background-size: cover;
+  background-repeat:repeat-y;
+}
+
+body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_box {
+  margin: 30px;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.text_box p{
+  margin: 3%;
+  font-size: 20px;
+  color: white;
+}
+
+.tab1 { text-indent: 40px }
+.tab2 { text-indent: 40px; }
+.tab3 { text-indent: 40px; }
+.tab4 { text-indent: 40px; }
+.tab5 { text-indent: 40px; }
+
+.scoring_rules {
+  margin: 20px;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.scoring_rules p{
+  margin: 2%;
+  font-size: 40px;
+  color: white;
+}
+
+.scoring_rules ul {
+  list-style-type: none;
+  color: white;
+  margin: 3%;
+  font-size: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.navbar li {
+  float: right;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.navbar .logout-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  border: none;
+}
+
+/*
+Login webpage CSS.
+*/
+
+#login {
+  background-image: url(/images/geometric.jpg);
+  background-size: cover;
+  background-repeat:repeat-y;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.login_box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+}
+
+.login_box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.login_box input[type = "text"],.login_box input[type = "password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.login_box input[type = "text"]:focus,.login_box input[type = "password"]:focus {
+  width: 200px;
+  border-color: #2ecc71;
+}
+
+.login_box input[type = "submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.login_box input[type = "submit"]:hover {
+  background: #2ecc71;
+}
+
+/*
+Registration webpage CSS.
+*/
+
+#register{
+  background-image: url(/images/geometric.jpg);
+  background-size: cover;
+  background-repeat:repeat-y;
+}
+
+.registration_box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+}
+
+.registration_box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.registration_box input[type = "text"],.registration_box input[type = "password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.registration_box input[type = "text"]:focus,.registration_box input[type = "password"]:focus {
+  width: 200px;
+  border-color: #2ecc71;
+}
+
+.registration_box input[type = "submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.registration_box input[type = "submit"]:hover {
+  background: #2ecc71;
+}
+
+#start_quiz_button {
+  background-color: black;
+  background-image: url(/images/stars.gif);
+  background-size: cover;
+  background-repeat:repeat-y;
+}
+
+.text_box1 {
+  margin: 30px;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.text_box1 p{
+  margin: 3%;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.button_box p{
+  margin: 3%;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.button_start {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  font-family: consolas;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,
+  0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+
+a span{
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1)
+{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent,#2196f3);
+}
+
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent,#2196f3);
+}
+
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent,#2196f3);
+}
+
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent,#2196f3);
+}
+
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.button_box {
+  margin: 30px;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.button_start {
+  margin: 30px;
+  background-color: black;
+  opacity: 0.9;
+}
+
+#questions {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/dots.jpg);
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  margin-top: 60px;
+}
+.container {
+  max-width: 600%;
+  background-color: rgba(255, 0, 0, 0.0);
+  padding: 10px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #00BFFF;
+  border-radius: 10px;
+  padding-top: 15px;
+  color: white;
+  outline: none;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.btn.correct {
+  background-color: #11c466;
+  border-color: #059e4c;
+  color: #ffffff;
+}
+
+.btn.wrong {
+  background-color: #f85943;
+  border-color: #d23723;
+  color: #ffffff;
+  animation: shake 1s linear;
+}
+
+.btn.already-answered {
+  pointer-events: none;
+}
+
+.btn.show-correct {
+  background-color: #11c466;
+  border-color: #059e4c;
+  color: #ffffff;
+  /*
+  transition: all .5s ease;
+  */
+}
+
+@keyframes shake {
+  0%, 30%, 50% {
+    transform: translateX(10px);
+  }
+  20%, 40% {
+    transform: translate(-10px);
+  }
+  60% {
+    transform: translate(-7px);
+  }
+  70% {
+    transform: translate(7px);
+  }
+  80% {
+    transform: translate(-4px);
+  }
+  90% {
+    transform: translate(4px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.remaining-time {
+  color: #FFD700;
+  font-size: 80px;
+  margin-left: 170px;
+  background-color: #00BFFF;
+  margin-right: 20px;
+}
+
+.nextbtn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: pink;
+  display: none;
+  margin-top: 2px;
+}
+
+.nextbtn.show {
+  display: inline-block;
+}
+
+.gamestatsbtn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: pink;
+  display: none;
+  margin-top: 2px;
+}
+
+.gamestatsbtn.show{
+  display: inline-block;
+
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table, th, td {
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+}
+
+.highscoresbtn{
+  margin: 30px;
+  background-color: black;
+  opacity: 0.9;
+  color: white;
+}
+
+#gamestats {
+  background-color: black;
+}
+
+#highscores {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+  <body id = "gamestats">
+    <div class = "navbar">
+    <ul>
+    <div class = "logout-container">
+      <button type = "submit" onclick="logout()"> Logout </button>
+    </div>
+    <li><a href="/quiz_game.html">Start Quiz</a></li>
+    </ul>
+    </div>
+
+    <div class = "highscorebtn">
+      <a href = "/scores/game_scores">
+        Click Here to View High Scores
+        </a>
+    </div>
+
+    <h1><%= title %></h1>
+    <table class = "game-stat">
+      <% if(data != null) { %>
+      <tr>
+        <td>Player name </td>
+        <td id = "username"><%= data.username %></td>
+      </tr>
+      <tr>
+        <td>Score</td>
+        <td id = "game-last-played">$<%= data.score %></td>
+      </tr>
+      <tr>
+        <td>Correct </td>
+        <td id = "total-correct"><%= data.correct %></td>
+      </tr>
+      <tr>
+        <td>Wrong </td>
+        <td id = "total-wrong"><%= data.incorrect %></td>
+      </tr>
+      <% var numgames = data.numberofGames; %>
+      <tr>
+        <td>Number of Games Played </td>
+        <td id = "number-of-games"><%= data.numberofGames %></td>
+      </tr>
+      <% var highestscore = data.highscore; %>
+      <tr>
+        <td>Highest Score</td>
+        <td id = "highest-score">$<%= data.highscore %></td>
+      </tr>
+    <% } else { %>
+      <tr>
+        <td> No data found </td>
+      </tr>
+    <% } %>
+    </table>
+
+    <script src = "/js/game.js">
+    var games = <%= numgames %>;
+    var highscore = <%= highestscore %>;
+     </script>
+
+    <script>
+
+      function logout() {
+        window.localStorage.clear();
+        window.location.replace("/login.html");
+      }
+      </script>
+  </body>
+</html>

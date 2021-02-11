@@ -1,0 +1,25 @@
+{
+  "name": "370_brain_teaser_game",
+  "version": "1.0.0",
+  "description": "fun game :D",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7"
+  },
+  "devDependencies": {
+    "env": "0.0.2",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Karishma Muni",
+  "license": "ISC"
+}

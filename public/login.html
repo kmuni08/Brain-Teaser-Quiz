@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script defer src = "/js/login.js" type="text/javascript"></script>
+  </head>
+  <body id = "login">
+
+    <div class = "navbar">
+      <ul>
+        <li><a class="active" href="/">Game Rules</a></li>
+        <li><a href="/register.html">Register</a></li>
+      </ul>
+    </div>
+
+    <div class = "login_box">
+      <h1> Login </h1>
+      <input type = "text" id = "username" name = "username" placeholder="Username">
+      <input type = "password" id = "password" name = "password" placeholder="Password">
+      <input type = "submit" name = "submit" value = "Login" onclick="login()">
+    </div>
+
+  </body>
+</html>

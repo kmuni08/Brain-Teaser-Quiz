@@ -1,0 +1,6 @@
+{
+  "name": "Game",
+  "description": "Quiz Game using Node.js and MongoDB Atlas",
+  "repository": "https://github.com/kmuni08/gameProject.git",
+  "keywords": ["node", "express", "heroku"]
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body id = "highscores">
+    <div class = "navbar">
+    <ul>
+    <div class = "logout-container">
+      <button type = "logout" id = "logout" onclick="logout()"> Logout </button>
+    </div>
+    <li><a id = "stats">Game Statistics</a></li>
+    <li><a href="/quiz_game.html">Start Quiz</a></li>
+    </ul>
+    </div>
+
+    <h1><%= title %></h1>
+    <table class = "game-stat">
+      <thead>
+        <tr>
+          <th> Player name </th>
+          <th> Highest Score </th>
+        </tr>
+      </thead>
+        <%if (results.length >0) { %>
+          <% results.forEach(function(row) { %>
+            <tr>
+              <td><%= row.username %></td>
+              <td>$<%= row.highscore %></td>
+            </tr>
+          <% })} else { %>
+            <tr>
+              <td> No data found</td>
+            </tr>
+        <% } %>
+    </table>
+
+    <script>
+      function logout() {
+        window.localStorage.clear();
+        window.location.replace("/login.html");
+      }
+
+      const stats = document.getElementById('stats');
+      stats.addEventListener('click', () => {
+        $.ajax({
+          url: "/scores/gamestats",
+          type: "GET",
+          dataType: 'html',
+          headers: {
+            Authorization: window.localStorage.getItem("token")
+          },
+          complete: (data) => {
+              console.log("status for GET: " + data.status)
+
+              // replace curreent document with the one that was returned
+              document.open('text/html')
+              document.write(data.responseText);
+              document.close();
+          }
+        });
+      })
+    </script>
+  </body>
+</html>

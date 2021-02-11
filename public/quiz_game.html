@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you Ready for the Quiz?</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+
+  </head>
+  <body id = "start_quiz_button">
+    <div class = "navbar">
+    <ul>
+    <div class = "logout-container">
+      <button type = "submit" onclick="logout()"> Logout </button>
+    </div>
+    <li><a id = "stats">Game Statistics</a></li>
+    </div>
+    </ul>
+
+  <div class = "button_box" id = "start_title">
+    <p id = "start_text"> Are you ready to start the game?
+    </p>
+  </div>
+
+  <img src = "/images/run.gif" alt = "Detective" width: "720" height: "480">
+
+  <div class = "button_start">
+    <a href = "/game.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Yes, Let's start this already!!!
+      </a>
+  </div>
+  <script>
+  function logout() {
+    window.localStorage.clear();
+    window.location.replace("/login.html");
+  }
+
+  const stats = document.getElementById('stats');
+  stats.addEventListener('click', () => {
+    $.ajax({
+      url: "/scores/gamestats",
+      type: "GET",
+      dataType: 'html',
+      headers: {
+        Authorization: window.localStorage.getItem("token")
+      },
+      complete: (data) => {
+          console.log("status for GET: " + data.status)
+
+          // replace current document with the one that was returned
+          document.open('text/html', 'gamestats.html')
+          document.write(data.responseText);
+          document.close();
+      }
+    });
+  })
+  </script>
+  </body>
+</html>
