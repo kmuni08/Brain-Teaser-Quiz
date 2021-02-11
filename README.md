@@ -1,6 +1,6 @@
 # Brainer-Teaser-Quiz
 
-My Software Engineer Game Project. 
+My Software Engineering Game Project. 
 Clone the Github Repository, 
 install the node_modules using the command
 npm install
